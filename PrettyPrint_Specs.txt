@@ -1,0 +1,81 @@
+
+Project 1.3: You are to write a simple method called: PrettyPrint.
+	PrettyPrint method is an independent program, its sole purpose is for us to see the results,
+     and it will be used in many occations.
+         	     
+
+**************************************
+Language:  C++ & Java
+Due date:  C++ soft copy:  9/03/2016 Sunday before Midnight
+ 		Jave soft copy: 9/04/2016 Monday before Midnight
+Due date:  C++ and Jave hard copy:  9/05/2016 Tuesday in class
+
+*************************************
+
+I. Input: a txt file representing an image (grey scale or binary), 
+	with the following format.
+
+       //** the name of the input file should be in argv[1] for C++ argv[0] for Java
+   
+	#row #col min_val max_val
+	n n n n n ... n
+	n n n n n ... n
+	:
+	:
+	n n n n n ... n
+
+	where #row,  #col min_val and max_val are integers,
+	follows by #row number line of #col integers, and
+	0<n<64.
+
+ 	For example,
+	
+	4 6 1 12			4 6 0 1
+	0 3 4 0 2 9		0 0 1 1 0 0
+	5 6 0 2 0 7		1 1 1 0 0 0
+	1 1 0 1 9 9		0 0 1 1 1 0
+	4 5 6 9 9 9		0 0 1 1 0 0
+	
+II. Output: the name of the output should have the following format:
+          fileName_PP where fileName is the name of input file
+
+ 	  3 4   2 9		    1 1    
+	5 6   2   7		1 1 1      
+	1 1   1 9 9		    1 1 1  
+	4 5 6 9 9 9		    1 1    
+	   		
+*******************************
+III. Data structure:
+*******************************
+ 	- numRows (int)
+	- numCols (int)
+	- minVal (int)
+	- maxVal (int)
+
+    - methods:
+					
+	- PrettyPrint
+	      
+*************************************
+III. Algorithms for pretty print
+*************************************
+  	
+step 0: - open input file 
+	   - open the output file with the required name.
+	   
+step 1: - read the image header from input file, the four numbers. 
+	         
+step 2: // process the input file from left to right and top to bottom
+        // using i from 0 to numRows - 1 and j from 0 to numCols - 
+      
+	pixel_val <- read from input 
+     if pixel_val > 0
+        output pixel_val
+     else        
+	   output ' ' // blank
+
+step 3: repeat step 2 until input file is empty
+
+step 4: close input and output files.
+    
+ 	
